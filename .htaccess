@@ -1,0 +1,16 @@
+# Disable directory browsing
+Options -Indexes
+
+# Protect sensitive files and directories
+<FilesMatch "^\.env">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+<FilesMatch "(^\.git|\.sql|\.log)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Block direct access to internal folders
+RedirectMatch 403 ^/.*(config|includes|database)/.*$

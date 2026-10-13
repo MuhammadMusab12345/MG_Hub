@@ -1,0 +1,6 @@
+.env
+uploads/products/*
+!uploads/products/.htaccess
+!uploads/products/index.html
+.DS_Store
+Thumbs.db
